@@ -1,0 +1,41 @@
+import java.util.Scanner; 
+
+public class Main { 
+    public static void main(String[] args) { 
+        Scanner sc = new Scanner(System.in); 
+        
+        System.out.print("Enter the number of elements: ");
+        int n = sc.nextInt();
+        
+      
+        if (n <= 0) {
+            System.out.println("Invalid size. Array must contain at least 1 element.");
+            sc.close();
+            return;
+        }
+        
+        int[] arr3 = new int[n];
+        
+        System.out.println("Enter " + n + " integers:");
+        for (int i = 0; i < n; i++) {
+            arr3[i] = sc.nextInt();
+        }
+        
+        int largest1 = arr3[0]; 
+        int smallest1 = arr3[0]; 
+        
+        for (int i = 1; i < arr3.length; i++) { 
+            if (arr3[i] > largest1) { 
+                largest1 = arr3[i]; 
+            } 
+            if (arr3[i] < smallest1) { 
+                smallest1 = arr3[i]; 
+            } 
+        } 
+        
+        System.out.println("First Largest Number: " + largest1); 
+        System.out.println("First Smallest Number: " + smallest1); 
+        
+        sc.close();
+    } 
+}
