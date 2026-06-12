@@ -1,0 +1,14 @@
+import java.util.HashMap;
+import java.util.Map;
+public class Main{
+    public static void main(String[] args){
+        HashMap<String, Integer> hashMap = new HashMap<>();
+        hashMap.put("Iswarya", 19);
+        hashMap.put("birundha", 20);
+        hashMap.put("deva", 19);
+        hashMap.put("kalpana", 19);
+        for (Map.Entry<String, Integer> entry : hashMap.entrySet()) {
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        }
+    }
+}
